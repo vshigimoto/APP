@@ -1,0 +1,35 @@
+import os
+directory = "pyth"
+parent_dir = "C:\\Users\\User\\Documents"
+path = os.path.join(parent_dir, directory)
+os.mkdir(path)
+print("Directory '%s' created" % directory)
+-------------------------------------------------------
+import os
+try:
+  path = ("C:\\Users\\User\\Documents\\pyth")
+  os.rmdir(path)
+  print("Good")
+except:
+  print("no")
+--------------------------------------------------------
+import os
+try:
+  directory = "pyth"
+  parent_dir = "C:\\Users\\User\\Documents"
+  path = os.path.join(parent_dir, directory)
+  os.getcwd()
+except:
+  print("no")
+---------------------------------------------------------
+import os
+try:
+  res = []
+  directory = "pyth"
+  parent_dir = "C:\\Users\\User\\Documents"
+  for path in os.listdir(parent_dir):
+    if os.path.isfile(os.path.join(parent_dir, path)):
+      res.append(path)
+  print(res)
+except:
+  print("no")
