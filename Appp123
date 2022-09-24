@@ -33,3 +33,46 @@ try:
   print(res)
 except:
   print("no")
+---------------------------------------------------------
+import sys
+try:
+  print("Argument list:", sys.argv)
+  print("Input value:", int(input()))
+  print("String value:", str(input()))
+except:
+  print("no, something is wrong")
+----------------------------------------------------------
+import sys
+try:
+  print("Argument list:", sys.argv)
+  print('Please, write integer value')
+  a = int(input())
+  print('Int value:', a)
+  print("Please, write string value")
+  b = str(input())
+  print('String value:', b)
+  print('Write word which you wanna uppercase')
+  name = str(input())
+  print('Task 3 upper case: \n', name.swapcase())
+except:
+  print("no, something is wrong")
+----------------------------------------------------------
+import math
+
+class Triangle:
+  def __init__(self, side, base, height):
+    self.side = side
+    self.base = base
+    self.height = height
+
+  def area(self):
+    area = (self.base * self.height) / 2
+    print('Area of this triangle is: ',area)
+
+  def perimeter(self):
+    perimeter = (self.side + self.base + self.height)
+    print('Perimeter of this triangle is:', perimeter)
+
+x = Triangle(1,2,3)
+x.area()
+x.perimeter()
